@@ -11,7 +11,12 @@ module.exports = {
     output: {
         // filename: 'bundle.js',
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist'
     },
     plugins: [
         new CleanWebpackPlugin(),
